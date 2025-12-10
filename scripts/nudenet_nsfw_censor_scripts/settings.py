@@ -7,6 +7,7 @@ import gradio as gr
 censor_region_settings = {
     # todo better description
     'nudenet_nsfw_censor_enable': shared.OptionInfo(True, 'Enable Region censor for image generation').info('default True'),
+    'nudenet_nsfw_censor_enable_in_main_ui': shared.OptionInfo(False, 'Show "Enable" toggle in the main generation tab').info('Requires Restart. If enabled, adds an accordion to the main UI to toggle the censor per-generation.'),
     'nudenet_nsfw_censor_save_before_censor': shared.OptionInfo(True, 'Save a copy of the image before applying censor').info('default True'),
     'nudenet_nsfw_censor_save_mask': shared.OptionInfo(False, 'Save censor mask').info('default False'),
     "nudenet_nsfw_censor_gen_filter_type": shared.OptionInfo('Gaussian Blur', 'Generation censor filter', gr.Radio, {'choices': list(filter_dict)}).info('default Gaussian Blur'),
